@@ -1,0 +1,968 @@
+git commit -m "Initial commit"
+Tech@James MINGW64 ~
+$ ssh -T git@github.com
+ssh: connect to host github.com port 22: Connection refused
+
+Tech@James MINGW64 ~
+$ ls -al ~/.ssh
+total 15
+drwxr-xr-x 1 Tech 197121   0 Apr 17 18:16 ./
+drwxr-xr-x 1 Tech 197121   0 Apr 18 18:05 ../
+-rw-r--r-- 1 Tech 197121 399 Apr 17 18:09 id_ed25519
+-rw-r--r-- 1 Tech 197121  89 Apr 17 18:09 id_ed25519.pub
+-rw-r--r-- 1 Tech 197121 828 Apr 17 18:16 known_hosts
+-rw-r--r-- 1 Tech 197121  92 Apr 17 18:16 known_hosts.old
+
+Tech@James MINGW64 ~
+$ ssh -vT git@github.com
+OpenSSH_9.9p2, OpenSSL 3.2.4 11 Feb 2025
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Connecting to github.com [127.0.0.1] port 22.
+debug1: connect to address 127.0.0.1 port 22: Connection refused
+ssh: connect to host github.com port 22: Connection refused
+
+Tech@James MINGW64 ~
+$ ~/.ssh/config
+bash: /c/SPB_Data/.ssh/config: No such file or directory
+
+Tech@James MINGW64 ~
+$ touch ~/.ssh/config
+
+Tech@James MINGW64 ~
+$ code ~/.ssh/config
+
+Tech@James MINGW64 ~
+$ ~/.ssh/config
+
+Tech@James MINGW64 ~
+$ ~/.ssh/config
+
+Tech@James MINGW64 ~
+$ cd ~/.ssh/config
+bash: cd: /c/SPB_Data/.ssh/config: Not a directory
+
+Tech@James MINGW64 ~
+$ mkdir -p ~/.ssh
+
+Tech@James MINGW64 ~
+$ touch ~/.ssh/config
+
+Tech@James MINGW64 ~
+$ ssh -vT git@github.com
+OpenSSH_9.9p2, OpenSSL 3.2.4 11 Feb 2025
+debug1: Reading configuration data /c/SPB_Data/.ssh/config
+debug1: /c/SPB_Data/.ssh/config line 1: Applying options for github.com
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Connecting to ssh.github.com [20.205.243.160] port 443.
+debug1: Connection established.
+debug1: identity file /c/SPB_Data/.ssh/id_rsa type -1
+debug1: identity file /c/SPB_Data/.ssh/id_rsa-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ecdsa type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ecdsa-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ecdsa_sk type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ed25519 type 3
+debug1: identity file /c/SPB_Data/.ssh/id_ed25519-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ed25519_sk type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_xmss type -1
+debug1: identity file /c/SPB_Data/.ssh/id_xmss-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_9.9
+debug1: Remote protocol version 2.0, remote software version 93587f60
+debug1: compat_banner: no match: 93587f60
+debug1: Authenticating to ssh.github.com:443 as 'git'
+debug1: load_hostkeys: fopen /c/SPB_Data/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /c/SPB_Data/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: checking without port identifier
+debug1: load_hostkeys: fopen /c/SPB_Data/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: hostkeys_find_by_key_cb: found matching key in ~/.ssh/known_hosts:1
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /c/SPB_Data/.ssh/known_hosts2 does not exist
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /etc/ssh/ssh_known_hosts does not exist
+debug1: hostkeys_find_by_key_hostfile: hostkeys file /etc/ssh/ssh_known_hosts2 does not exist
+The authenticity of host '[ssh.github.com]:443 ([20.205.243.160]:443)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:1: github.com
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[ssh.github.com]:443' (ED25519) to the list of known hosts.
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_ext_info_client_parse: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_rsa
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_ecdsa
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_ecdsa_sk
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_ed25519 ED25519 SHA256:Y+ud+olfRm6Xq2/uY3OhhHapnXV7VUDUusXFX5+9ofg
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_ed25519_sk
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_xmss
+debug1: Trying private key: /c/SPB_Data/.ssh/id_rsa
+debug1: Trying private key: /c/SPB_Data/.ssh/id_ecdsa
+debug1: Trying private key: /c/SPB_Data/.ssh/id_ecdsa_sk
+debug1: Offering public key: /c/SPB_Data/.ssh/id_ed25519 ED25519 SHA256:Y+ud+olfRm6Xq2/uY3OhhHapnXV7VUDUusXFX5+9ofg
+debug1: Server accepts key: /c/SPB_Data/.ssh/id_ed25519 ED25519 SHA256:Y+ud+olfRm6Xq2/uY3OhhHapnXV7VUDUusXFX5+9ofg
+Authenticated to ssh.github.com ([20.205.243.160]:443) using "publickey".
+debug1: channel 0: new session [client-session] (inactive timeout: 0)
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /c/SPB_Data/.ssh/known_hosts for [ssh.github.com]:443 / (none)
+debug1: client_input_hostkeys: searching /c/SPB_Data/.ssh/known_hosts2 for [ssh.github.com]:443 / (none)
+debug1: client_input_hostkeys: hostkeys file /c/SPB_Data/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: pledge: fork
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+Hi leoli8559! You've successfully authenticated, but GitHub does not provide shell access.
+debug1: channel 0: free: client-session, nchannels 1
+Transferred: sent 2168, received 2600 bytes, in 0.6 seconds
+Bytes per second: sent 3590.3, received 4305.7
+debug1: Exit status 1
+
+Tech@James MINGW64 ~
+$ ssh -vT git@github.com
+OpenSSH_9.9p2, OpenSSL 3.2.4 11 Feb 2025
+debug1: Reading configuration data /c/SPB_Data/.ssh/config
+debug1: /c/SPB_Data/.ssh/config line 1: Applying options for github.com
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Connecting to ssh.github.com [20.205.243.160] port 443.
+debug1: Connection established.
+debug1: identity file /c/SPB_Data/.ssh/id_rsa type -1
+debug1: identity file /c/SPB_Data/.ssh/id_rsa-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ecdsa type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ecdsa-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ecdsa_sk type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ed25519 type 3
+debug1: identity file /c/SPB_Data/.ssh/id_ed25519-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ed25519_sk type -1
+debug1: identity file /c/SPB_Data/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /c/SPB_Data/.ssh/id_xmss type -1
+debug1: identity file /c/SPB_Data/.ssh/id_xmss-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_9.9
+debug1: Remote protocol version 2.0, remote software version 93587f60
+debug1: compat_banner: no match: 93587f60
+debug1: Authenticating to ssh.github.com:443 as 'git'
+debug1: load_hostkeys: fopen /c/SPB_Data/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /c/SPB_Data/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[ssh.github.com]:443' is known and matches the ED25519 host key.
+debug1: Found key in /c/SPB_Data/.ssh/known_hosts:4
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_ext_info_client_parse: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,e.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2h.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,r
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_rsa
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_ecdsa
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_ecdsa_sk
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_ed25519 ED25519 SHA256:Y+ud+olfRm6Xq2/uY3OhhHapnXV7VUDUusXFX5+9ofg
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_ed25519_sk
+debug1: Will attempt key: /c/SPB_Data/.ssh/id_xmss
+debug1: Trying private key: /c/SPB_Data/.ssh/id_rsa
+debug1: Trying private key: /c/SPB_Data/.ssh/id_ecdsa
+debug1: Trying private key: /c/SPB_Data/.ssh/id_ecdsa_sk
+debug1: Offering public key: /c/SPB_Data/.ssh/id_ed25519 ED25519 SHA256:Y+ud+olfRm6Xq2/uY3OhhHapnXV7VUDUusXFX5+9ofg
+debug1: Server accepts key: /c/SPB_Data/.ssh/id_ed25519 ED25519 SHA256:Y+ud+olfRm6Xq2/uY3OhhHapnXV7VUDUusXFX5+9ofg
+Authenticated to ssh.github.com ([20.205.243.160]:443) using "publickey".
+debug1: channel 0: new session [client-session] (inactive timeout: 0)
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /c/SPB_Data/.ssh/known_hosts for [ssh.github.com]:443 / (none)
+debug1: client_input_hostkeys: searching /c/SPB_Data/.ssh/known_hosts2 for [ssh.github.com]:443 / (none)
+debug1: client_input_hostkeys: hostkeys file /c/SPB_Data/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: pledge: fork
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+Hi leoli8559! You've successfully authenticated, but GitHub does not provide shell access.
+debug1: channel 0: free: client-session, nchannels 1
+Transferred: sent 2168, received 2600 bytes, in 0.6 seconds
+Bytes per second: sent 3571.8, received 4283.5
+debug1: Exit status 1
+
+Tech@James MINGW64 ~
+$
+
+Tech@James MINGW64 ~
+$
+
+Tech@James MINGW64 ~
+$ git clone git@github.com:leoli8559/test.git
+Cloning into 'test'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+Tech@James MINGW64 ~
+$ ls
+cdssetup/  eagle/  eaglerc.usr  pcbenv/  pip/  test/
+
+Tech@James MINGW64 ~
+$ pwd
+/c/SPB_Data
+
+Tech@James MINGW64 ~
+$ mkdir leo
+
+Tech@James MINGW64 ~
+$ cd ~/leo
+
+Tech@James MINGW64 ~/leo
+$ git clone git@github.com:leoli8559/5_----.git
+Cloning into '5_----'...
+remote: Enumerating objects: 421, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 421 (delta 2), reused 4 (delta 1), pack-reused 415 (from 1)
+Receiving objects: 100% (421/421), 173.78 MiB | 2.10 MiB/s, done.
+Resolving deltas: 100% (95/95), done.
+Updating files: 100% (338/338), done.
+
+Tech@James MINGW64 ~/leo
+$ mkdir my-project
+
+Tech@James MINGW64 ~/leo
+$ cd my-project
+
+Tech@James MINGW64 ~/leo/my-project
+$ git init
+Initialized empty Git repository in C:/SPB_Data/leo/my-project/.git/
+
+Tech@James MINGW64 ~/leo/my-project (master)
+$ touch example.txt
+
+Tech@James MINGW64 ~/leo/my-project (master)
+$ git commit -m "Initial commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .ssh/
+        example.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tech@James MINGW64 ~/leo/my-project (master)
+$ git remote add origin git@github.com:leoli8559/repository.git
+
+Tech@James MINGW64 ~/leo/my-project (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:leoli8559/repository.git'
+
+Tech@James MINGW64 ~/leo/my-project (master)
+$ git branch
+
+Tech@James MINGW64 ~/leo/my-project (master)
+$ git branch -m master main
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:leoli8559/repository.git'
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ git remote add origin git@github.com:leoli8559/test.git
+error: remote origin already exists.
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ git remote remove origin
+git remote add origin git@github.com:leoli8559/test.git
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ git remote set-url origin git@github.com:leoli8559/test.git
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:leoli8559/test.git'
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ git branch -m old_branch_name main
+git push -u origin main
+fatal: no branch named 'old_branch_name'
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:leoli8559/test.git'
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ git branch
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ git log
+fatal: your current branch 'main' does not have any commits yet
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ echo "# a" >> README.md
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ cd ./
+
+Tech@James MINGW64 ~/leo/my-project (main)
+$ cd ~/leo
+
+Tech@James MINGW64 ~/leo
+$ mikdir a
+bash: mikdir: command not found
+
+Tech@James MINGW64 ~/leo
+$ mikdir ~/a
+bash: mikdir: command not found
+
+Tech@James MINGW64 ~/leo
+$ mikdir A
+bash: mikdir: command not found
+
+Tech@James MINGW64 ~/leo
+$ mkdir A
+
+Tech@James MINGW64 ~/leo
+$ cd a
+
+Tech@James MINGW64 ~/leo/a
+$ git init
+Initialized empty Git repository in C:/SPB_Data/leo/A/.git/
+
+Tech@James MINGW64 ~/leo/a (master)
+$ echo "# a" >> README.md
+
+Tech@James MINGW64 ~/leo/a (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Tech@James MINGW64 ~/leo/a (master)
+$ git commit -m "first commit"
+[master (root-commit) 81889ed] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Tech@James MINGW64 ~/leo/a (master)
+$ git branch -M main
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git remote add origin https://github.com/leoli8559/a.git
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 211 bytes | 211.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/leoli8559/a.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git remote add origin https://github.com/leoli8559/a.git
+error: remote origin already exists.
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git branch -M main
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git branch -M main
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .ssh/
+        example.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git add .
+warning: in the working copy of '.ssh/id_ed25519', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.ssh/id_ed25519.pub', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.ssh/known_hosts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.ssh/known_hosts.old', LF will be replaced by CRLF the next time Git touches it
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git commit -m "添加了新文件"
+[main bc817d3] 添加了新文件
+ 6 files changed, 34 insertions(+)
+ create mode 100644 .ssh/config
+ create mode 100644 .ssh/id_ed25519
+ create mode 100644 .ssh/id_ed25519.pub
+ create mode 100644 .ssh/known_hosts
+ create mode 100644 .ssh/known_hosts.old
+ create mode 100644 example.txt
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.85 KiB | 270.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote:
+remote:     - Push cannot contain secrets
+remote:
+remote:
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-wit
+remote:
+remote:
+remote:       —— GitHub SSH Private Key ————————————————————————————
+remote:        locations:
+remote:          - commit: bc817d3edb795382b4cd6ad95740fb537e68a79c
+remote:            path: .ssh/id_ed25519:1
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/leoli8559/a/security/secret-scanning/unblock-secret/2w1M6oSgFB1MwC0y8AmaIV2Dc0U
+remote:
+remote:
+remote:
+To https://github.com/leoli8559/a.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/leoli8559/a.git'
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git add .
+warning: in the working copy of 'default_18-04-2025_16-00.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'etc/hosts.ics', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'factory_17-04-2025_16-40.json', LF will be replaced by CRLF the next time Git touches it
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.85 KiB | 946.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote:
+remote:     - Push cannot contain secrets
+remote:
+remote:
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-wit
+remote:
+remote:
+remote:       —— GitHub SSH Private Key ————————————————————————————
+remote:        locations:
+remote:          - commit: bc817d3edb795382b4cd6ad95740fb537e68a79c
+remote:            path: .ssh/id_ed25519:1
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/leoli8559/a/security/secret-scanning/unblock-secret/2w1M6oSgFB1MwC0y8AmaIV2Dc0U
+remote:
+remote:
+remote:
+To https://github.com/leoli8559/a.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/leoli8559/a.git'
+
+Tech@James MINGW64 ~/leo/a (main)
+$ bash
+git filter-repo --path .ssh/id_ed25519 --invert-paths --force
+
+--path <文件路径>：指定要删除的敏感文件路径。
+--invert-paths：保留其他文件，仅删除指定路径的文件。
+--force：强制覆盖历史提交（需注意本地未推送的修改可能丢失）。
+步骤 3：确认敏感文件已被移除
+bash
+git log --oneline  # 检查提交历史，确认敏感文件已不在任何提交中
+git status  # 确保工作目录干净
+
+3. 推送修改后的历史（强制推送）
+由于修改了 Git 历史，需使用 --force 强制推送到远程仓库：
+bash
+git push origin main --force
+
+注意：强制推送会覆盖远程仓库的历史记录，若有其他协作者，需提前沟通确认
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push origin main --force
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.85 KiB | 946.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote:
+remote:     - Push cannot contain secrets
+remote:
+remote:
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-wit
+remote:
+remote:
+remote:       —— GitHub SSH Private Key ————————————————————————————
+remote:        locations:
+remote:          - commit: bc817d3edb795382b4cd6ad95740fb537e68a79c
+remote:            path: .ssh/id_ed25519:1
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/leoli8559/a/security/secret-scanning/unblock-secret/2w1M6oSgFB1MwC0y8AmaIV2Dc0U
+remote:
+remote:
+remote:
+To https://github.com/leoli8559/a.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/leoli8559/a.git'
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git log --oneline
+bc817d3 (HEAD -> main) 添加了新文件
+81889ed (origin/main) first commit
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    .ssh/config
+        deleted:    .ssh/id_ed25519
+        deleted:    .ssh/id_ed25519.pub
+        deleted:    .ssh/known_hosts
+        deleted:    .ssh/known_hosts.old
+        new file:   default_18-04-2025_16-00.json
+        new file:   etc/hosts
+        new file:   etc/hosts.ics
+        new file:   etc/lmhosts.sam
+        new file:   etc/networks
+        new file:   etc/protocol
+        new file:   etc/services
+        new file:   factory_17-04-2025_16-40.json
+        new file:   "\346\226\260\345\273\272 \346\226\207\346\234\254\346\226\207\346\241\243.txt"
+
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push origin main --force
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.85 KiB | 946.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote:
+remote:     - Push cannot contain secrets
+remote:
+remote:
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-wit
+remote:
+remote:
+remote:       —— GitHub SSH Private Key ————————————————————————————
+remote:        locations:
+remote:          - commit: bc817d3edb795382b4cd6ad95740fb537e68a79c
+remote:            path: .ssh/id_ed25519:1
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/leoli8559/a/security/secret-scanning/unblock-secret/2w1M6oSgFB1MwC0y8AmaIV2Dc0U
+remote:
+remote:
+remote:
+To https://github.com/leoli8559/a.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/leoli8559/a.git'
+
+Tech@James MINGW64 ~/leo/a (main)
+$ ping github.com
+
+正在 Ping github.com [127.0.0.1] 具有 32 字节的数据:
+来自 127.0.0.1 的回复: 字节=32 时间<1ms TTL=128
+来自 127.0.0.1 的回复: 字节=32 时间<1ms TTL=128
+来自 127.0.0.1 的回复: 字节=32 时间<1ms TTL=128
+
+127.0.0.1 的 Ping 统计信息:
+    数据包: 已发送 = 3，已接收 = 3，丢失 = 0 (0% 丢失)，
+往返行程的估计时间(以毫秒为单位):
+    最短 = 0ms，最长 = 0ms，平均 = 0ms
+Control-C
+
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git filter-repo --path .ssh/id_ed25519 --invert-paths --force
+git: 'filter-repo' is not a git command. See 'git --help'.
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git log --oneline
+bc817d3 (HEAD -> main) 添加了新文件
+81889ed (origin/main) first commit
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git add .
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git commit -m "添加了新文件2"
+[main 9e054d7] 添加了新文件2
+ 14 files changed, 1292 insertions(+), 16 deletions(-)
+ delete mode 100644 .ssh/config
+ delete mode 100644 .ssh/id_ed25519
+ delete mode 100644 .ssh/id_ed25519.pub
+ delete mode 100644 .ssh/known_hosts
+ delete mode 100644 .ssh/known_hosts.old
+ create mode 100644 default_18-04-2025_16-00.json
+ create mode 100644 etc/hosts
+ create mode 100644 etc/hosts.ics
+ create mode 100644 etc/lmhosts.sam
+ create mode 100644 etc/networks
+ create mode 100644 etc/protocol
+ create mode 100644 etc/services
+ create mode 100644 factory_17-04-2025_16-40.json
+ create mode 100644 "\346\226\260\345\273\272 \346\226\207\346\234\254\346\226\207\346\241\243.txt"
+
+Tech@James MINGW64 ~/leo/a (main)
+$ git push origin main
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (21/21), 10.45 KiB | 1.16 MiB/s, done.
+Total 21 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote:
+remote:     - Push cannot contain secrets
+remote:
+remote:
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-wit
+remote:
+remote:
+remote:       —— GitHub SSH Private Key ————————————————————————————
+remote:        locations:
+remote:          - commit: bc817d3edb795382b4cd6ad95740fb537e68a79c
+remote:            path: .ssh/id_ed25519:1
+remote:
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/leoli8559/a/security/secret-scanning/unblock-secret/2w1M6oSgFB1MwC0y8AmaIV2Dc0U
+remote:
+remote:
+remote:
+To https://github.com/leoli8559/a.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/leoli8559/a.git'
+
+Tech@James MINGW64 ~/leo/a (main)
+$
+
+Tech@James MINGW64 ~/leo/a (main)
+$ cd ~/leo
+
+Tech@James MINGW64 ~/leo
+$ mkdir b
+
+Tech@James MINGW64 ~/leo
+$ cd b
+
+Tech@James MINGW64 ~/leo/b
+$ git init
+Initialized empty Git repository in C:/SPB_Data/leo/b/.git/
+
+Tech@James MINGW64 ~/leo/b (master)
+$ touch example.txt
+
+Tech@James MINGW64 ~/leo/b (master)
+$ add ./
+bash: add: command not found
+
+Tech@James MINGW64 ~/leo/b (master)
+$ add .
+bash: add: command not found
+
+Tech@James MINGW64 ~/leo/b (master)
+$ add .
+bash: add: command not found
+
+Tech@James MINGW64 ~/leo/b (master)
+$ git commit -m "Initial commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        79895f24e22a47a18a6923159a5c6e70~tplv-jbbdkfciu3-image_0_0.image
+        A32U4test.hex
+        ATSAMG55J19A converter of technical.hex
+        example.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tech@James MINGW64 ~/leo/b (master)
+$ git add .
+
+Tech@James MINGW64 ~/leo/b (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 93dc95e] Initial commit
+ 4 files changed, 16394 insertions(+)
+ create mode 100644 79895f24e22a47a18a6923159a5c6e70~tplv-jbbdkfciu3-image_0_0.image
+ create mode 100644 A32U4test.hex
+ create mode 100644 ATSAMG55J19A converter of technical.hex
+ create mode 100644 example.txt
+
+Tech@James MINGW64 ~/leo/b (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+Tech@James MINGW64 ~/leo/b (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Tech@James MINGW64 ~/leo/b (master)
+$ git remote add origin https://github.com/leoli8559/a.git
+
+Tech@James MINGW64 ~/leo/b (master)
+$ git branch -M main
+
+Tech@James MINGW64 ~/leo/b (main)
+$ git push -u origin main
+fatal: unable to access 'https://github.com/leoli8559/a.git/': Failed to connect to github.com port 443 after 21052 ms: Could n
+
+Tech@James MINGW64 ~/leo/b (main)
+$ git push -u origin main
+To https://github.com/leoli8559/a.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/leoli8559/a.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Tech@James MINGW64 ~/leo/b (main)
+$ git push -u origin main
+To https://github.com/leoli8559/a.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/leoli8559/a.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Tech@James MINGW64 ~/leo/b (main)
+$ git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 191 bytes | 21.00 KiB/s, done.
+From https://github.com/leoli8559/a
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+fatal: refusing to merge unrelated histories
+
+Tech@James MINGW64 ~/leo/b (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+Tech@James MINGW64 ~/leo/b (main)
+$ git commit -m "合并远程更改"
+On branch main
+nothing to commit, working tree clean
+
+Tech@James MINGW64 ~/leo/b (main)
+$ git push origin main
+To https://github.com/leoli8559/a.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/leoli8559/a.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Tech@James MINGW64 ~/leo/b (main)
+$ git push origin main --force
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 961.79 KiB | 10.23 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/leoli8559/a.git
+ + 81889ed...93dc95e main -> main (forced update)
+
+Tech@James MINGW64 ~/leo/b (main)
+$ cd ~/leo
+
+Tech@James MINGW64 ~/leo
+$ mkdir new
+
+Tech@James MINGW64 ~/leo
+$ cd new
+
+Tech@James MINGW64 ~/leo/new
+$ git remote add origin git@github.com:leoli8559/a.git
+fatal: not a git repository (or any of the parent directories): .git
+
+Tech@James MINGW64 ~/leo/new
+$ git remote add origin git@github.com:leoli8559/a.git
+fatal: not a git repository (or any of the parent directories): .git
+
+Tech@James MINGW64 ~/leo/new
+$ git remote add origin git@github.com:leoli8559/a.git
+fatal: not a git repository (or any of the parent directories): .git
+
+Tech@James MINGW64 ~/leo/new
+$ git clone git@github.com:leoli8559/a.git
+Cloning into 'a'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), 961.79 KiB | 873.00 KiB/s, done.
+
+Tech@James MINGW64 ~/leo/new
+$ cd a
+
+Tech@James MINGW64 ~/leo/new/a (main)
+$ git branch
+* main
+
+Tech@James MINGW64 ~/leo/new/a (main)
+$ git checkout -b new-feature
+Switched to a new branch 'new-feature'
+
+Tech@James MINGW64 ~/leo/new/a (new-feature)
+$ git branch
+  main
+* new-feature
+
+Tech@James MINGW64 ~/leo/new/a (new-feature)
+$ git status
+On branch new-feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        20250220-112222.jpg
+        20250224-104515.jpg
+        Application Builder.png.png
+        QFN24.png
+        V2mixly.mix
+        "\346\211\223\345\215\260\346\265\213\350\257\225mixly.mix"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tech@James MINGW64 ~/leo/new/a (new-feature)
+$ git add .
+
+Tech@James MINGW64 ~/leo/new/a (new-feature)
+$ git commit -m "Add new feature and modify some codes"
+[new-feature 38a5c4a] Add new feature and modify some codes
+ 6 files changed, 2 insertions(+)
+ create mode 100644 20250220-112222.jpg
+ create mode 100644 20250224-104515.jpg
+ create mode 100644 Application Builder.png.png
+ create mode 100644 QFN24.png
+ create mode 100644 V2mixly.mix
+ create mode 100644 "\346\211\223\345\215\260\346\265\213\350\257\225mixly.mix"
+
+Tech@James MINGW64 ~/leo/new/a (new-feature)
+$ git push -u origin new-feature
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 693.20 KiB | 2.00 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'new-feature' on GitHub by visiting:
+remote:      https://github.com/leoli8559/a/pull/new/new-feature
+remote:
+To github.com:leoli8559/a.git
+ * [new branch]      new-feature -> new-feature
+branch 'new-feature' set up to track 'origin/new-feature'.
+
+Tech@James MINGW64 ~/leo/new/a (new-feature)
