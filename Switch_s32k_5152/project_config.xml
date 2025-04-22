@@ -1,0 +1,12 @@
+<Input>
+    <projectName>Switch_s32k_5152</projectName>
+    <processorId>S32K314</processorId>
+    <coreId>S32K314_M7</coreId>
+    <library>newlib</library>
+    <io>hosted</io>
+    <fpu>None</fpu>
+    <language>c</language>
+    <debugger>pne</debugger>
+    <sdkPath>PlatformSDK_S32K3_S32K314_M7_3.0.0_PATH</sdkPath>
+    <toolchain>com.nxp.s32ds.cle.arm.mbs.arm32.bare.gnu.10.2.toolchain</toolchain>
+</Input>

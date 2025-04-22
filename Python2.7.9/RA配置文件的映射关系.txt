@@ -1,0 +1,74 @@
+************************************
+（1）背光指令格式(十六进制)
+		Backlight_ID=1B
+		Reserved=F3
+
+****************************************
+*GM项目不同产品的背光ID（十六进制）    *
+****************************************
+		Wave1_11inch_Backlight_ID  = 03
+		Wave1_11.3inch_Backlight_ID = 06
+		Wave2_11inch_Backlight_ID  = 12
+		Wave2_11inch_LD_Backlight_ID = 1D
+		Wave2_17.7inch_Backlight_ID = 0C
+		Wave1_8inch_HVAC_Backlight_ID = 1F
+		Wave1_8inch_CC_Backlight_ID = 1B
+
+
+***********************************
+（2）配置文件指令格式(十六进制)：
+		Command 11,22,33,44,55,66
+	
+***********************************
+（3）comamnd后面有六个字节的含义：
+		byte1代表产品型号(11)、
+		byte2代表CS版本、
+		byte3代表TP版本、
+		byte4代表Switch_pack版本、
+		byte5代表TI983_lock值、
+		byte6未使用；
+***********************************
+（4）产品型号：
+		WAVEI_11      = 0x01
+		WAVEI_11_3    = 0x02
+		WAVEII_11     = 0x03
+		WAVEII_11_LD  = 0x04
+		WAVEII_17_7   = 0x05
+		WAVEI_8_HVAC  = 0x06
+		WAVEI_8_CC    = 0x07
+	
+***********************************
+（5）CS版本：
+		CS_VERSION_CS2 = 0x01
+		CS_VERSION_CS3 = 0x02
+
+***********************************
+（6）TP版本：
+		0代表没有TP
+		TP_WAVEII_FW_V48   = 0x01
+		TP_WAVEII_17_7_CS3 = 0x02
+		TP_WAVEI_11_3      = 0x03
+		TP_WAVEI_8_HVAC    = 0x04
+		TP_WAVEI_8_CC      = 0x05
+		TP_WAVEII_FW_V94   = 0X06
+************************************
+（7）Switch_pack版本：
+		SP_WAVEII_17_7_CS3_SZA = 0x01
+		SP_WAVEII_17_7_CS3_DZA = 0x02
+		SP_WAVEI_11_3_CS3      = 0x03
+	
+*************************************
+（8）TI983_lock值：
+		state_of_lock_value1 = 0x41
+		state_of_lock_value2 = 0x53
+	
+************************************
+* 不同产品的lock值                 *                  
+************************************
+		Wave1_11inch_CS3.0     == 0x53
+		Wave1_11.3inch_CS3.0   == 0x53
+		Wave2_11inch_CS3.0     == 0x41
+		Wave2_11inch_LD_CS3.0  ==
+		Wave2_17.7inch_CS3.0   == 0x41
+		Wave1_8inch_HVAC_CS3.0 == 0x41
+		Wave1_8inch_CC_CS3.0   == 0x41
